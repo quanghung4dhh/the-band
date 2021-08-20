@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('http://fonts.cdnfonts.com/css/segoe-ui-4');
+* {
+  box-sizing: border-box;
+  padding: 0;
+  font-family: 'Lato', 'Arial' , 'sans-serif';
+  margin: 0;
+}
+*::before, *::after {
+  box-sizing: inherit;
+}
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+} 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 400;
+  letter-spacing: 4px;
+}
+
+/*  Top Nav  */
+
+.nav_top {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+}
+.nav_bar {
+  background: #000;
+}
+.nav_bar::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.nav_bar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 25px;
+  cursor: pointer;
+  display: inline-block;
+}
+.nav_bar .dropdown_container {
+  display: none;
+  float: left;
+  position: relative;
+}
+.dropdown_container .dropdown_items {
+  position: absolute;
+  background: #000;
+  width: 200px;
+  z-index: 1;
+  display: none;
+}
+.dropdown_container .dropdown_items a {
+  display: block;
+}
+.dropdown_container:hover .dropdown_items {
+  display: block;
+}
+.nav_bar a.nav_bar_item {
+  float: left;
+}
+.nav_bar .nav_bar_item{
+  display: none;
+}
+.nav_bar a.home{
+  display: inline-block;
+}
+.nav_bar .dropdown_btn, .search {
+  float: right;
+}
+.nav_bar .search {
+  display: none;
+}
+.nav_bar .search:hover {
+  background: red;
+  color: #fff;
+}
+.nav_bar #dropdown_content {
+  clear: both;
+  display: none;
+}
+.dropdown_show {
+  display: block !important;
+}
+.nav_bar #dropdown_content a {
+  display: block;
+}
+.nav_bar a:hover {
+  background: #fff;
+  color: #000;
+}
+
+/*  Img Slide  */
+
+.top_img img {
+  max-width: 100%;
+  height: auto;
+}
+.top_img {
+  position: relative;
+}
+.top_img .img_desc_text {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  color: #fff;
+}
+.img_desc_text h2 {
+  letter-spacing: 0;
+  margin-bottom: 20px;
+}
+
+/* Main content  */
+
+.main-content {
+  margin-top: 49px;
+}
+
+/*  The Band  */
+
+#band {
+  padding: 60px 15px;
+}
+#band h1, #band i {
+  text-align: center;
+}
+#band i {
+  display: block;
+  color: rgba(0,0,0,.6);
+  margin: 20px 0;
+}
+#band .intro {
+  font-size: 18px;
+  text-align: justify;
+}
+.img_desc {
+  text-align: center;
+  padding: 50px 25px;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+}
+.img_desc div {
+  width: 100%;
+  text-align: center;
+  flex: 100%;
+}
+.img_desc div:not-last-child {
+  margin-top: 35px;
+}
+.img_desc .desc {
+  padding: 20px 0;
+}
+
+/*  Tour  */
+
+#tour {
+  background: #000;
+  padding: 110px 15px;
+}
+#tour h1, #tour i {
+  text-align: center;
+  color: #fff;
+}
+#tour i {
+  display: block;
+  margin: 25px 0;
+  opacity: .6;
+}
+#tour .ticket_sold {
+  background: #fff;
+}
+#tour ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+#tour li {
+  padding: 15px;
+  color: #888;
+}
+#tour li:not(.not_soldout) {
+  border-bottom: 1px solid rgb(221,221,221);
+}
+#tour li:not(.not_soldout) span {
+  padding: 3px 5px;
+  background: rgb(244,67,54);
+  color: #fff;
+  margin-left: 25px;
+}
+#tour li.not_soldout span {
+  background: #000;
+  color: #fff;
+  padding: 3px 8px;
+  text-align: center;
+  float: right;
+  margin-right: 16px;
+  border-radius: 50%;
+}
+.ticket_select {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.ticket_option {
+  background: #fff;
+  flex: 100%;
+  margin-top: 35px;
+}
+.ticket_option img {
+  max-width: 100%;
+  height: auto;
+}
+.ticket_option img:hover {
+  opacity: .6;
+}
+.ticket_option .desc_text {
+  padding: 15px;
+}
+.ticket_option .desc_text .title {
+  font-weight: bold;
+}
+.ticket_option .desc_text .day {
+  opacity: .6;
+  margin: 15px 0;
+}
+.ticket_option .desc_text button {
+  background: #000;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  margin-top: 35px;
+}
+
+/*  Contact  */
+
+#contact {
+  padding: 110px 15px;
+}
+#contact h1, #contact .italic {
+  text-align: center;
+}
+#contact .italic {
+  display: block;
+  margin: 20px 0 30px 0;
+  opacity: .6;
+}
+#contact p {
+  margin-top: 8px;
+}
+#contact p i {
+  margin-right: 15px;
+  display: inline-block;
+  width: 17px;
+}
+.form {
+  padding-top: 50px;
+  overflow: hidden;
+}
+.form input[type="text"] {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid rgba(0,0,0,.6);
+  outline: none;
+  font-size: 17px;
+}
+.form input:first-child {
+  border-bottom-color: transparent;
+}
+.form input:nth-child(3) {
+  margin-top: 25px;
+}
+.form input[type="button"] {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  background: #000;
+  margin-top: 20px;
+  float: right;
+  padding: 12px 18px;
+}
+
+/*  Footer  */
+
+.footer {
+  padding: 50px 0;
+}
+.footer img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.social_media {
+  text-align: center;
+  padding: 60px 0 30px 0;
+}
+.social_media i:not(last-child) {
+  margin-right: 3px;
+}
+.social_media i {
+  opacity: .6;
+  display: inline-block;
+  font-size: 24px;
+}
+.social_media i:hover {
+  opacity: .4;
+}
+.rights {
+  text-align: center;
+  opacity: .6;
+}
+
+/*  For Destop  */
+
+@media screen and (min-width:768px) {
+  
+  /*  Nav Bar  */
+  
+  .nav_bar .nav_bar_item {
+    display: inline-block;
+  }
+  .nav_bar .dropdown_btn {
+    display: none;
+  }
+  .nav_bar .search {
+    display: inline-block;
+  }
+  .nav_bar .dropdown_container {
+    display: inline-block;
+  }
+  
+  /*  Img slides  */
+  
+  .top_img .img_desc_text {
+    display: block;
+  }
+  
+  /*  Band */
+  
+  #band {
+    padding: 70px;
+  }
+  .img_desc {
+    flex-direction: row;
+  }
+  .img_desc div {
+    flex: 33%;
+  }
+  
+  /*  Tour  */
+  
+  #tour {
+    padding: 110px 70px;
+  }
+  .ticket_select {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .ticket_select .ticket_option {
+    flex: 33%;
+  }
+  .ticket_select .ticket_option:not(.not_margin) {
+    margin-right: 30px;
+  }
+  
+  /*  Contact  */
+  
+  #contact {
+    padding: 110px 70px;
+  }
+  .info_form {
+    overflow: hidden;
+  }
+  #contact .form, #contact .info {
+    float: left;
+    width: 50%;
+  }
+  #contact .form {
+    padding: 0;
+    overflow: hidden;
+  }
+  .form input[type="text"] {
+    width: 46%;
+  }
+  .form input:first-child {
+    border: 1px solid rgba(0,0,0,.6);
+  }
+  .form input:nth-child(2) {
+    float: right;
+  }
+  .form input:nth-child(3) {
+    width: 100%;
+  }
+}
