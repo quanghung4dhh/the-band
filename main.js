@@ -3,7 +3,7 @@ function Dropdown() {
   if (x.className.indexOf('dropdown_show') == -1) {
     x.className += 'dropdown_show';
   } else {
-    x.className = '';
+    x.className = x.className.replace('dropdown_show', '');
   }
 }
 
