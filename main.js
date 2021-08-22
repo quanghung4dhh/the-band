@@ -1,3 +1,6 @@
+
+//Menu Dropdown for small menu
+
 function Dropdown() {
   var x = document.getElementById('dropdown_content');
   if (x.className.indexOf('dropdown_show') == -1) {
@@ -6,6 +9,8 @@ function Dropdown() {
     x.className = '';
   }
 }
+
+//Img slide
 
 window.onload = function() {
   img_show();
@@ -24,4 +29,16 @@ function img_show() {
   x[a].style.display = 'block';
   a++;
   setTimeout(img_show, 4000);
+}
+
+//Order Ticket
+
+function order() {
+  document.getElementsByClassName('ticket_order')[0].style.display = 'block';
+}
+
+//Close order button
+
+function Close() {
+  document.getElementsByClassName('ticket_order')[0].style.display = 'none';
 }

@@ -121,7 +121,7 @@
             <p class="title">New York</p>
             <p class="day">Fri 27 Nov 2021</p>
             <p class="text">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button>Buy Tickets</button>
+            <button onclick="order()">Buy Tickets</button>
           </div>
         </div>
         <div class="ticket_option">
@@ -130,7 +130,7 @@
             <p class="title">Paris</p>
             <p class="day">Mon 29 Nov 2021</p>
             <p class="text">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button>Buy Tickets</button>
+            <button onclick="order()">Buy Tickets</button>
           </div>
         </div>
         <div class="ticket_option not_margin">
@@ -139,9 +139,26 @@
             <p class="title">Francisco</p>
             <p class="day">Tues 30 Nov 2021</p>
             <p class="text">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button>Buy Tickets</button>
+            <button onclick="order()">Buy Tickets</button>
           </div>
         </div>
+      </div>
+    </div>
+    
+    <!-- Ticket order -->
+    
+    <div class="ticket_order">
+      <div class="head">
+        <h1><i class="fas fa-suitcase"></i>Tickets</h1>
+      </div>
+      <div class="order_info">
+        <label for="tickets"><i class="fas fa-shopping-cart"></i>Tickets, $15 per person</label>
+        <input type="text" name="tickets" id="tickets" placeholder="How many?">
+        <label for="email"><i class="fas fa-user"></i>Send to</label>
+        <input type="text" name="email" id="email" placeholder="Enter email">
+        <button class="pay">PAY<i class="fas fa-check"></i></button>
+        <div class="help"><p>Need <a href="javascript:void(0)">help?</a></div>
+        <button class="close" onclick="Close()">Close<i class="fas fa-times"></i></button>
       </div>
     </div>
     

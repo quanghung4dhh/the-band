@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav_top {
   width: 100%;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0;
 }
 .nav_bar {
@@ -241,6 +241,100 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px 15px;
   margin-top: 35px;
 }
+.desc_text button:hover {
+  color: #000;
+  background: #ccc;
+}
+
+/*  Ticket order  */
+
+.ticket_order {
+  position: fixed;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  width: 95%;
+  z-index: 1;
+  animation: fromtop .4s;
+  display: none;
+}
+@keyframes fromtop {
+  from{top: 0}
+  to{top: 10%}
+}
+.head {
+  background: rgb(0,150,136);
+  padding: 40px 0;
+  text-align: center;
+  color: #fff;
+}
+.head h1 i {
+  margin-right: 15px;
+}
+.order_info {
+  padding: 15px 25px;
+  background: #fff;
+  box-shadow: 0px 4px 10px rgba(0,0,0,.2), 3px 5px 9px rgba(0,0,0,.19);
+}
+.order_info label {
+  margin-bottom: 20px;
+  display: inline-block;
+}
+.order_info label[for="email"] {
+  margin-top: 20px;
+}
+.order_info label i {
+  margin-right: 10px;
+}
+.order_info input{
+  width: 100%;
+  outline: none;
+  border: 1px solid #000;
+  font-size: 17px;
+  padding: 8px;
+}
+.order_info button.pay {
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+  padding: 20px 0;
+  font-size: 18px;
+  background: rgb(0,150,136);
+  color: #fff;
+  outline: none;
+  border: none;
+}
+.order_info button.pay i {
+  margin-left: 5px;
+}
+.order_info button.pay:hover, .order_info button.close:hover {
+  background: #ccc;
+  color: #000;
+}
+.order_info .help {
+  margin: 15px 0;
+  overflow: hidden;
+}
+.order_info p {
+  float: right;
+}
+.order_info p a {
+  color: #04AA6D;
+}
+.order_info button.close {
+  clear: both;
+  display: block;
+  padding: 12px 18px;
+  text-align: center;
+  background: red;
+  outline: none;
+  border: none;
+  color: #fff;
+  text-align: center;
+}
+.order_info button.close i {
+  margin-left: 5px;
+}
 
 /*  Contact  */
 
@@ -290,6 +384,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 20px;
   float: right;
   padding: 12px 18px;
+}
+.form input[type="button"]:hover {
+  background: #ccc;
+  color: #000;
 }
 
 /*  Footer  */
@@ -373,6 +471,12 @@ h1, h2, h3, h4, h5, h6 {
   }
   .ticket_select .ticket_option:not(.not_margin) {
     margin-right: 30px;
+  }
+  
+  /*  Ticket order  */
+  
+  .ticket_order {
+    width: 80%;
   }
   
   /*  Contact  */
