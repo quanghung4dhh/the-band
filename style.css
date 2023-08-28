@@ -97,7 +97,7 @@ h1, h2, h3, h4, h5, h6 {
 /*  Img Slide  */
 
 .top_img img {
-  min-width: 100%;
+  max-width: 100%;
   height: auto;
 }
 .top_img {
@@ -396,7 +396,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 50px 0;
 }
 .footer img {
-  min-width: 100%;
+  max-width: 100%;
   height: auto;
   display: block;
 }
@@ -422,7 +422,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /*  For Destop  */
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
   
   /*  Nav Bar  */
   
